@@ -1,0 +1,22 @@
+<!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide text-white text-center" *ngFor="let actor of cast">
+      
+        <img 
+            [src]="actor.profile_path | poster" 
+            [alt]="actor.name"
+            class="img-thumbnail">
+
+        <div class="movie-description">
+        <h3>{{ actor.name }}</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- If we need navigation buttons -->
+  <!-- <div (click)="onSlidePrev()" class="swiper-button-prev"></div>
+    <div (click)="onSlideNext()" class="swiper-button-next"></div> -->
+</div>
